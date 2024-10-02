@@ -1,0 +1,110 @@
+.perfil {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.perfil h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffff;
+    text-shadow: #000 1px 1px;
+}
+
+.perfil .campoInput {
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+}
+
+.perfil label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+
+.campoInput input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* Remove a borda(contorno) default(preta) do navegador quando o input é selecionado e permite definir uma nova borda.
+    ATENÇÃO: outline é muito importante para a acessibilidade do Usuário quando utiliza o site. Portanto, o outline padrão quando retirado, deve ser substituido por controle com a mesma finalidade.
+    */
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 50px 20px 20px;
+}
+
+.campoInput input[type='file'] {    
+    display: none;
+}
+
+.lbFotoPerfil{       
+    width: 50%;
+    height: 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.imgPerfil img{
+    border-radius: 5px;
+}
+
+.lbFotoPerfil:hover {
+    background: rgba(9, 218, 208, 0.847);
+}
+
+/* Nova definição de outline(contorno) */
+.campoInput input:focus {
+    border: 1px solid;
+    background: transparent;
+    border-color: #007185;
+    /* Adiciona uma sombra no elemento */
+    box-shadow: 0 0 0 2px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+.dadosUsuario input::placeholder {
+    color: #fff;
+}
+
+.perfil button {
+    width: 35%;
+    height: 30px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    text-shadow: none;
+
+    transition: all 0.3s ease;
+    /* Centralizar Botão */
+    display: block;
+    margin: 0 auto;
+}
+
+.btnPerfil .linkVoltar {
+    color: #333;
+    text-decoration: none;
+}
+
+.btnPerfil :hover {
+    background: rgba(9, 218, 208, 0.847);
+}

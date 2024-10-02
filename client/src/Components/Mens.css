@@ -1,0 +1,13 @@
+.mensagens {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.mensErro {
+    color: red;
+}
+
+.mensagem {
+    color: green;
+}

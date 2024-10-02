@@ -1,0 +1,15 @@
+/* CSS reset(reiniciar) */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  /*
+  O box-sizing com o valor border-box faz com que o navegador não calcule
+  a dimensão de um elemento somando bordas e margens com altura e largura.
+  */
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Novas Definções */

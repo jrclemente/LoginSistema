@@ -1,0 +1,103 @@
+:root {
+    /* fonts */
+    --fs-300: clamp(0.94rem, calc(0.84rem + 0.51vw), 1.2rem);
+    --fs-400: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
+    --fs-600: clamp(2.8rem, calc(2.11rem + 3.47vw), 4.58rem);
+
+    --lh-1: 1;
+
+    /* utils */
+    --content: 60ch;
+
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+
+    --round-sm: 4px;
+
+    /* colors - Através do uso HSL onde: H(Hue), S(Saturation), L (Lightness) */
+    --accent: 183 74% 44%;
+    --bkg: 190 60% 98%;
+    --text: 185 26% 9%;
+    --red: 0 100% 50%;
+}
+
+/* 
+A função hsl() do CSS permite especificar cores em um site ou aplicativo usando o modelo HSL (Hue, Saturation, Lightness), que é composto por matiz, saturação e luminosidade.
+*/
+
+.error h1 {
+    font-weight: bold;
+    line-height: var(--lh-1);
+    font-size: var(--fs-600);
+    /* color: hsl(var(--text)); */
+    color: hsl(var(--red));
+}
+
+.error p {
+    max-width: var(--content);
+    font-size: var(--fs-400);
+    /* color: hsl(var(--text)); */
+}
+
+.error {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: var(--space-lg);
+    padding-block: var(--space-lg);
+    text-align: center;
+}
+
+.flex-md {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: var(--space-md);
+}
+
+/* links and buttons */
+/* where: https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+:where(.erro a, .btn) {
+    --color: hsl(var(--text));
+    --backdrop: hsl(var(--accent));
+    font: inherit;
+    color: var(--color);
+    border-radius: var(--round-sm);
+    -webkit-transition: -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
+        -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1),
+        -webkit-box-shadow 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+:where(.error a, .btn):is(:hover, :focus-visible) {
+    -webkit-box-shadow: 0 0 0 3px hsl(var(--bkg)), 0 0 0 6px var(--backdrop);
+    box-shadow: 0 0 0 3px hsl(var(--bkg)), 0 0 0 6px var(--backdrop);
+}
+
+.btn {
+    --color: hsl(var(--bkg));
+    background-color: var(--backdrop);
+    color: var(--color);
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--backdrop);
+    font-size: var(--fs-300);
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: var(--space-xs);
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+/* :where(.btn--dark) {
+    --backdrop: hsl(var(--text));
+} */

@@ -1,0 +1,103 @@
+.cadastro {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.cadastro h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffff;
+    text-shadow: #000 1px 1px;
+}
+
+.dadosUsuario .campoInput {
+    width: 100%;
+    height: 50px;
+    margin: 25px auto;
+}
+
+.cadastro label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.campoInput input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* Remove a borda(contorno) default(preta) do navegador quando o input é selecionado e permite definir uma nova borda.
+    ATENÇÃO: outline é muito importante para a acessibilidade do Usuário quando utiliza o site. Portanto, o outline padrão quando retirado, deve ser substituido por controle com a mesma finalidade.
+    */
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    /* padding: 20px 50px 20px 20px; */
+    padding: 10px 40px 10px 10px;
+}
+
+/* Nova definição de outline(contorno) */
+.campoInput input:focus {
+    border: 1px solid;
+    background: transparent;
+    border-color: #007185;
+    /* Adiciona uma sombra no elemento */
+    box-shadow: 0 0 0 2px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+.dadosUsuario input::placeholder {
+    color: #fff;
+}
+
+.btn_Form_Cadastro {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.cadastro button {
+    width: 35%;
+    height: 30px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    text-shadow: none;
+
+    transition: all 0.3s ease;
+    /* Centralizar Botão */
+    display: block;
+    margin: 0 auto;
+}
+
+.btnCriarPerfil{
+    margin-top: 30px;
+}
+
+.btnCriarPerfil .linkPerfil {
+    color: #333;
+    text-decoration: none;   
+}
+
+.btn_linkLogin {
+    color: #333;
+    text-decoration: none;
+}
+
+.cadastro button:hover {
+    background: rgba(9, 218, 30, 0.847);
+}
+
+.btnCriarPerfil button:hover {
+    background: rgba(0, 17, 255, 0.956)
+}
